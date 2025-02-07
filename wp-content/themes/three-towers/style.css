@@ -1,0 +1,258 @@
+/*
+Theme Name: Tree Towers Theme
+Description: A custom theme for simple Three Towers website
+Version: 1.0
+Author: Dainius
+*/
+@font-face {
+    font-family: 'Sora';
+    src: url('assets/fonts/Sora-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sora', sans-serif;
+}
+
+.page-content {
+    background: #030617;
+    overflow: hidden;
+}
+
+p {
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.page-layout {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 50px;
+    gap: 20px;
+    padding-top: 100px;
+}
+
+.menu-toggle {
+    color: #ffffff;
+    font-size: 28px;
+    display: none;
+}
+
+.site-footer {
+    display: none;
+}
+
+.site-header {
+    background-image: linear-gradient(45deg, #010411 0%, #09103A 100%);
+}
+
+.main-nav-toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 50px;
+    z-index: 99;
+}
+
+.main-nav ul {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+}
+
+.main-nav ul li a {
+    font-size: 14px;
+    line-height: 150%;
+    text-decoration: none;
+    background: linear-gradient(180deg, #E0EAF7 0%, #F1F4FE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex-grow: 1;
+    width: 100%;
+    min-width: 0
+}
+
+.sticky-sidebar {
+    position: sticky;
+    padding: 30px;
+    border-radius: 18px;
+    border: 2px solid transparent;
+    background-image: linear-gradient(180deg, #5EDFFF 0%, #1D58F5 100%), linear-gradient(180deg, #1D58F5 0%, #65DDFB 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    width: 306px;
+    height: 331px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-sidebar__top {
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid;
+    padding-bottom: 30px;
+}
+
+.sticky-sidebar__top-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sticky-sidebar__top-info span {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.sticky-sidebar__top-image img {
+    height: 80px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.sticky-sidebar__points {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.range-bar {
+    width: 100%
+}
+
+.sticky-sidebar__points-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.sticky-sidebar__points-title {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.sticky-sidebar__points-number {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.range-bar__line {
+    width: 100%;
+    height: 8px;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.range-fill {
+    height: 100%;
+    background: #000;
+}
+
+.range-bar__levels {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.range-bar__levels span {
+    font-size: 13px;
+}
+
+.section-headings {
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    border-bottom: 1px solid #fff;
+}
+
+.section-heading__title {
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1200px) {
+    .section-headings.with-description {
+        flex-direction: column;
+        align-items: unset;
+        gap: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-nav-toggle {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: linear-gradient(45deg, #010411 0%, #09103A 100%);
+        width: 100%;
+    }
+
+    .admin-bar .main-nav-toggle {
+        top: 46px;
+    }
+
+    .main-nav-toggle.active {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .main-nav-toggle.active ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .main-nav-toggle.active .header-button img {
+        height: 44px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        padding: 10px;
+        text-align: right;
+        margin-right: 40px;
+        z-index: 999;
+        position: relative;
+    }
+}
+
+@media (max-width: 850px) {
+    .page-layout {
+        flex-direction: column;
+        padding: 32px 16px;
+    }
+}
