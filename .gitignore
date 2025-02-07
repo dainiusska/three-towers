@@ -1,0 +1,18 @@
+# Ignore everything by default
+*
+
+# Allow versioning of this .gitignore file
+!.gitignore
+
+# Allow wp-content directory
+!wp-content/
+
+# Allow themes directory inside wp-content
+!wp-content/themes/
+
+# Allow only the three-towers theme
+!wp-content/themes/three-towers/
+
+# Ignore everything else inside themes except three-towers
+wp-content/themes/*
+!wp-content/themes/three-towers/
